@@ -125,7 +125,7 @@ int main() {
 ## 👨‍💻 Author  
 
 ### 🚀 **Darshan Vasani**  
-💡 **Software Engineer | Full-Stack Developer**  
+💡 **Full-Stack Developer | Software Engineer | Mentor**    
 
 ### 🔗 Connect with me! 🌍  
 🌐 **Portfolio:** [dpvasani56.vercel.app](https://dpvasani56.vercel.app/)  
