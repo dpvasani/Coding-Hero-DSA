@@ -1,5 +1,5 @@
 
-# 🧩 DSA Sheet – Problem 8: Almost Palindrome Detector
+# 🧩 DSA Sheet – Problem 9: Almost Palindrome Detector
 
 ## 🎯 Problem Level  
 **Easy**
