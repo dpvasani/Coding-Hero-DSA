@@ -158,6 +158,6 @@ int main() {
 - **Topmate:** [topmate.io/dpvasani56](https://topmate.io/dpvasani56)  
 - **Linktree:** [linktr.ee/dpvasani56](https://linktr.ee/dpvasani56)  
 - **Twitter/X:** [@vasanidarshan56](https://x.com/vasanidarshan56)  
-- **Credly:** [@dpvasani55](https://www.credly.com/users/dpvasani55/)
+- **Credly:** [@dpvasani57](https://www.credly.com/users/dpvasani57/)
 
 ---
