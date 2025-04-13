@@ -1,4 +1,9 @@
 # 🎵 DSA Sheet – Problem 2: Playlist History Manager
+## 🎯 Problem Level  
+**Easy**
+
+---
+
 
 ## 🛡️ Problem Background  
 

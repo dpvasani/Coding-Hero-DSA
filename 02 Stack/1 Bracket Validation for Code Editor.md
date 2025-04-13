@@ -1,9 +1,10 @@
 # 🔐 DSA Sheet – Problem 1: 🧾 Bracket Validation for Code Editor — C++ Challenge
 
-## 🧠 Problem Level  
+## 🎯 Problem Level  
 **Easy**
 
 ---
+
 
 ## 🧩 Background  
 
@@ -126,12 +127,19 @@ int main() {
 ## 👨‍💻 Author  
 
 ### 🚀 **Darshan Vasani**  
-🔧 Compiler Enthusiast | C++ Dev | Mentor | DSA Sheet Curator
+💡 **Full-Stack Developer | Software Engineer | Mentor**    
 
-### 🔗 Explore More  
-- 🌐 [dpvasani56.vercel.app](https://dpvasani56.vercel.app)  
-- 🧑‍💻 [GitHub](https://github.com/dpvasani)  
-- 🎙️ [Topmate Sessions](https://topmate.io/dpvasani56)  
-- 🧵 [Twitter](https://x.com/vasanidarshan56)
+### 🔗 Connect with me! 🌍  
+🌐 **Portfolio:** [dpvasani56.vercel.app](https://dpvasani56.vercel.app/)  
+🐙 **GitHub:** [github.com/dpvasani](https://github.com/dpvasani)  
+💼 **LinkedIn:** [linkedin.com/in/dpvasani56](https://www.linkedin.com/in/dpvasani56/)  
+🌳 **Linktree:** [linktr.ee/dpvasani56](https://linktr.ee/dpvasani56)  
+🎓 **Credly:** [credly.com/users/dpvasani57](https://www.credly.com/users/dpvasani57/)  
+🐦 **Twitter:** [x.com/vasanidarshan56](https://x.com/vasanidarshan56)  
+📢 **Topmate:** [topmate.io/dpvasani56](https://topmate.io/dpvasani56)  
 
 ---
+
+🚀 **Follow me for more cool DSA problems & solutions!** 🌟  
+
+---  

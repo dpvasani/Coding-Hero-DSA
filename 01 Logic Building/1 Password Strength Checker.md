@@ -1,5 +1,10 @@
 # 🔐 DSA Sheet – Problem 1: Password Strength Checker
 
+## 🎯 Problem Level  
+**Easy**
+
+---
+
 ## 🛡️ Problem Background  
 
 You are a **Cybersecurity Engineer** at **ChaiCode**, working on an API to evaluate the strength of user passwords during signup. A **strong password** is crucial to keep user accounts safe from hackers! 🦸‍♂️💻  
