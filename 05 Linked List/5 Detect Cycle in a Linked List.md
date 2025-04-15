@@ -1,4 +1,5 @@
-# 📌 DSA Sheet – Problem 3: 🔢 Find Kth Element from End  
+# 📌 DSA Sheet – Problem 4: 🔁 Detect Cycle in a Linked List  
+
 ## 🎯 Problem Level  
 **Medium**
 
@@ -6,31 +7,34 @@
 
 ## 🧩 Background  
 
-Finding the **kth element from the end** of a singly linked list is a classic problem that teaches **pointer manipulation**, **fast-slow pointer technique**, and performing operations in a **single pass** to ensure O(n) time and O(1) space complexity. This efficient approach helps in solving problems where you cannot afford to traverse the list twice or use additional memory.
+Detecting a **cycle in a linked list** is a key problem in the study of data structures, especially in real-world applications like cache implementations, navigation systems, or detecting infinite loops in graphs. The most efficient technique is **Floyd’s Cycle Detection Algorithm**, which uses **two pointers** (slow and fast) moving at different speeds. If there’s a cycle, these pointers will eventually meet.
 
 ---
 
 ## 📝 Problem Statement  
 
-Implement a function that returns the **kth node from the end** of a singly linked list. If `k` is greater than the number of nodes in the list, return `-1`.
+Implement a function that returns `true` if a singly linked list contains a **cycle**, otherwise `false`.  
+
+A **cycle** occurs when a node’s `next` pointer points to a previously visited node.
 
 > ✅ Each node in the list contains:
-> - `value`: the data
-> - `next`: pointer to the next node
+> - `value`: the data  
+> - `next`: pointer to the next node  
 
 ---
 
 ## 📥 Input Format  
 
-- A string in the format: `[linked list elements] | k`  
-  Example: `[1, 2, 3, 4, 5] | 2`
+- A string in the format: `[linked list elements] | cycle position`  
+  - Example: `[1, 2, 3, 4, 5] | 1`  
+  - Here, the node with value 5 connects back to the node at index 1 (0-indexed).
 
 ---
 
 ## 📤 Output Format  
 
-- Output the value of the `kth` node from the end.  
-- Output `-1` if `k` exceeds the length of the list.
+- Output `"true"` if a cycle exists in the linked list.  
+- Output `"false"` if no cycle exists.
 
 ---
 
@@ -38,22 +42,22 @@ Implement a function that returns the **kth node from the end** of a singly link
 
 ### 🔹 Example 1  
 ```
-Input:  [1, 2, 3, 4, 5] | 2  
-Output: 4
+Input:  [1, 2, 3, 4, 5] | 1  
+Output: true
 ```
 
 ### 🔹 Example 2  
 ```
-Input:  [10, 20, 30] | 5  
-Output: -1
+Input:  [1, 2, 3] | -1  
+Output: false
 ```
 
 ---
 
 ## ⚙️ Constraints  
 - `1 ≤ length of list ≤ 10^5`  
-- `1 ≤ k ≤ 10^5`  
-- `-10^5 ≤ Node value ≤ 10^5`
+- `-1 ≤ cycle position < length of list`  
+- `-10^5 ≤ Node value ≤ 10^5`  
 
 ---
 
@@ -74,25 +78,21 @@ struct ListNode {
 };
 
 // Please implement this function only
-int findKthFromEnd(ListNode* head, int k) {
-    if (!head || k <= 0) return -1;
+bool detectCycle(ListNode* head) {
+    if (!head) return false;
 
-    ListNode* first = head;
-    ListNode* second = head;
+    ListNode* slow = head;
+    ListNode* fast = head;
 
-    // Move 'first' pointer k steps ahead
-    for (int i = 0; i < k; ++i) {
-        if (!first) return -1;  // k is larger than the length
-        first = first->next;
+    while (fast && fast->next) {
+        slow = slow->next;
+        fast = fast->next->next;
+
+        if (slow == fast)
+            return true;
     }
 
-    // Move both pointers until 'first' reaches the end
-    while (first) {
-        first = first->next;
-        second = second->next;
-    }
-
-    return second ? second->value : -1;
+    return false;
 }
 
 // Please don't remove the code below
@@ -109,10 +109,7 @@ int main() {
         }
         
         string arrStr = input.substr(0, pipePos);
-        string kStr = input.substr(pipePos + 1);
-        
-        // Parse k
-        int k = stoi(kStr);
+        string cyclePos = input.substr(pipePos + 1);
         
         // Parse array
         vector<int> arr;
@@ -131,9 +128,12 @@ int main() {
             }
         }
         
+        int pos = stoi(cyclePos);
+        
         // Create linked list
         ListNode* head = nullptr;
         ListNode* current = nullptr;
+        vector<ListNode*> nodes;
         
         for (int val : arr) {
             if (!head) {
@@ -143,19 +143,35 @@ int main() {
                 current->next = new ListNode(val);
                 current = current->next;
             }
+            nodes.push_back(current);
         }
         
-        // Get result
-        int result = findKthFromEnd(head, k);
+        // Create cycle if needed
+        if (pos >= 0 && pos < arr.size()) {
+            current->next = nodes[pos];
+        }
+        
+        // Detect cycle
+        bool result = detectCycle(head);
         
         // Output result
-        cout << result;
+        cout << (result ? "true" : "false");
         
-        // Clean up memory
-        while (head) {
-            ListNode* temp = head;
-            head = head->next;
-            delete temp;
+        // Clean up memory (careful with cycles)
+        if (pos < 0 || pos >= arr.size()) {
+            while (head) {
+                ListNode* temp = head;
+                head = head->next;
+                delete temp;
+            }
+        } else {
+            // Break the cycle before cleanup
+            if (current) current->next = nullptr;
+            while (head) {
+                ListNode* temp = head;
+                head = head->next;
+                delete temp;
+            }
         }
     }
     catch (const exception&) {
@@ -169,7 +185,7 @@ int main() {
 ---
 
 ## 🏷️ Tags  
-`📚 Linked List` | `🎯 Two Pointers` | `🧠 Kth Element Logic` | `🚀 One-Pass Algorithm`
+`📚 Linked List` | `🔁 Cycle Detection` | `🐢🐇 Floyd’s Algorithm` | `🔎 Two Pointers`
 
 ---
 
