@@ -1,7 +1,8 @@
-
 # Coding-Hero-DSA
 
 This repository contains a collection of Data Structures and Algorithms (DSA) problems and solutions, categorized into different sections like Logic Building, Stack, Queue, Heap, etc. Each folder contains problems with detailed explanations and code solutions in C++.
+
+**Problem credits go to Hitesh Chaudhary (Chai Aur Code). Solutions are provided by me.**
 
 ---
 
