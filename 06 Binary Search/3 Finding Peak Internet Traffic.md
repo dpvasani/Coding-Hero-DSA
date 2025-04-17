@@ -1,4 +1,4 @@
-# 📌 DSA Sheet – Problem X: ❓ Finding Peak Internet Traffic  
+# 📌 DSA Sheet – Problem 3: ❓ Finding Peak Internet Traffic  
 ## 🎯 Problem Level  
 **Medium**
 
