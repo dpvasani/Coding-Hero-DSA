@@ -172,7 +172,7 @@ int main() {
 🐙 **GitHub:** [github.com/dpvasani](https://github.com/dpvasani)  
 💼 **LinkedIn:** [linkedin.com/in/dpvasani56](https://www.linkedin.com/in/dpvasani56/)  
 🌳 **Linktree:** [linktr.ee/dpvasani56](https://linktr.ee/dpvasani56)  
-🎓 **Credly:** [credly.com/users/dpvasani55](https://www.credly.com/users/dpvasani55/)  
+🎓 **Credly:** [credly.com/users/dpvasani57](https://www.credly.com/users/dpvasani57/)  
 🐦 **Twitter:** [x.com/vasanidarshan56](https://x.com/vasanidarshan56)  
 📢 **Topmate:** [topmate.io/dpvasani56](https://topmate.io/dpvasani56)
 
