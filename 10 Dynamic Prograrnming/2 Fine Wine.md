@@ -1,4 +1,4 @@
-# 📌 DSA Sheet – 28 : 🍷 Fine Wine
+# 📌 DSA Sheet – 2: 🍷 Fine Wine
 
 ## 🎯 Problem Level  
 **Medium**
